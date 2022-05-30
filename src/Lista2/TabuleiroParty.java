@@ -25,6 +25,7 @@ public class TabuleiroParty implements ITabuleiro{
 
     @Override
     public boolean podeJogar(CartaDeAtaque carta, Jogador jogador) {
+        adicionaAoCampo(carta);
         return jogador.getQuantidadeManaTurno() == carta.custo;
     }
 
