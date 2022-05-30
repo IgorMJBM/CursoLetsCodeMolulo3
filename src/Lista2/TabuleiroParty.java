@@ -8,8 +8,8 @@ public class TabuleiroParty implements ITabuleiro{
     private List<Jogador> listaDeJogadores = new ArrayList<>(5);
     private List<CartaDeAtaque> decksDosJogadores = new ArrayList<>(5);
 
-    private List<CartaDeAtaque> campoCartasDeAtaque = new ArrayList<>(5);
-    private List<CartaDeAtaqueEspecial> campoCartasDeAtaqueEspecial = new ArrayList<>(2);
+    private List<CartaDeAtaque> campoCartasDeAtaque = new ArrayList<>(25);
+    private List<CartaDeAtaqueEspecial> campoCartasDeAtaqueEspecial = new ArrayList<>(10);
 
     public TabuleiroParty(List<Jogador> listaDeJogadores) {
         this.listaDeJogadores = listaDeJogadores;
@@ -56,13 +56,13 @@ public class TabuleiroParty implements ITabuleiro{
 
     public void adicionaAoCampo(CartaDeAtaque carta){
         if (carta instanceof CartaDeAtaqueEspecial){
-            if (campoCartasDeAtaqueEspecial.size() <= 2){
+            if (campoCartasDeAtaqueEspecial.size() <= 25){
                 campoCartasDeAtaqueEspecial.add((CartaDeAtaqueEspecial) carta);
             } else {
                 System.out.println("LIMITE MÁXIMO DE CARTAS NO CAMPO");
             }
         } else {
-            if (campoCartasDeAtaque.size() <= 5){
+            if (campoCartasDeAtaque.size() <= 10){
                 campoCartasDeAtaque.add(carta);
             } else {
                 System.out.println("LIMITE MÁXIMO DE CARTAS NO CAMPO");
