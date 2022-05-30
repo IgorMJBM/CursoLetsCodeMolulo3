@@ -6,7 +6,7 @@ import java.util.List;
 public class TabuleiroVersus implements ITabuleiro {
 
     private List<Jogador> listaDeJogadores = new ArrayList<>(2);
-    private List<CartaDeAtaque> decksDosJogadores = new ArrayList<>(2);
+    private List<CartaDeAtaque[]> decksDosJogadores = new ArrayList<>(2);
 
     private List<CartaDeAtaque> campoCartasDeAtaque = new ArrayList<>(5);
     private List<CartaDeAtaqueEspecial> campoCartasDeAtaqueEspecial = new ArrayList<>(2);
