@@ -6,7 +6,7 @@ import java.util.List;
 public class TabuleiroParty implements ITabuleiro{
 
     private List<Jogador> listaDeJogadores = new ArrayList<>(5);
-    private List<CartaDeAtaque> decksDosJogadores = new ArrayList<>(5);
+    private List<CartaDeAtaque[]> decksDosJogadores = new ArrayList<>(5);
 
     private List<CartaDeAtaque> campoCartasDeAtaque = new ArrayList<>(25);
     private List<CartaDeAtaqueEspecial> campoCartasDeAtaqueEspecial = new ArrayList<>(10);
